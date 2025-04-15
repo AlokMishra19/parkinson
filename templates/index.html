@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroInde - Parkinson's Disease Prediction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="icon" type="image/png" href="../static/images/letter-n.png">
+     
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-brain"></i>
+                    <span>NeuroInde</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#prediction">Prediction</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Parkinson's Disease Prediction</h1>
+                <p>Using advanced voice analysis to detect early signs of Parkinson's disease with machine learning</p>
+                <a href="#prediction" class="btn">Check Your Risk</a>
+                <a href="#about" class="btn btn-outline">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Parkinson's Disease</h2>
+                <p>Understanding the condition and our prediction system</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Voice Analysis for Parkinson's Detection</h3>
+                    <p>Parkinson's disease often affects speech patterns before other more visible symptoms appear. Our system analyzes specific voice characteristics that are known to be affected by Parkinson's disease, including jitter, shimmer, and harmonic ratios.</p>
+                    <p>These acoustic measurements can reveal subtle changes in voice quality that may indicate early stages of Parkinson's disease, often before clinical diagnosis is possible through traditional methods.</p>
+                    <p>Our machine learning model has been trained on thousands of voice samples from both healthy individuals and Parkinson's patients to achieve high accuracy in prediction.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Voice analysis for Parkinson's detection">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Key Voice Parameters We Analyze</h2>
+                <p>Critical acoustic measurements for Parkinson's detection</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-wave-square"></i>
+                    </div>
+                    <h3>Jitter</h3>
+                    <p>Measures the variation in pitch from cycle to cycle in vocal fold vibrations. Higher values may indicate instability.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <h3>Shimmer</h3>
+                    <p>Measures the variation in amplitude between consecutive vocal fold vibrations. Increased in Parkinson's patients.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>NHR & HNR</h3>
+                    <p>Noise-to-Harmonics and Harmonics-to-Noise ratios measure voice quality and hoarseness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="prediction">
+        <div class="container">
+            <div class="section-title">
+                <h2>Parkinson's Disease Risk Assessment</h2>
+                <p>Enter your voice analysis parameters to check your risk</p>
+            </div>
+
+            <form id="parkinsonForm" class="prediction-form">
+                <!-- Form progress steps -->
+                <div class="form-progress">
+                    <div class="progress-step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Personal Info</div>
+                    </div>
+                    <div class="progress-step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Basic Parameters</div>
+                    </div>
+                    <div class="progress-step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Advanced Metrics</div>
+                    </div>
+                    <div class="progress-step" data-step="4">
+                        <div class="step-number">4</div>
+                        <div class="step-label">Review</div>
+                    </div>
+                </div>
+
+                <!-- Step 1: Personal Information -->
+                <div class="form-step active" data-step="1">
+                    <div class="form-group">
+                        <label for="unitName">Full Name</label>
+                        <input type="text" id="unitName" class="form-control" required>
+                        <div class="validation-message valid">Looks good!</div>
+                        <div class="validation-message invalid">Please enter your full name</div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="age">Age</label>
+                            <input type="number" id="age" class="form-control" min="18" max="100" required>
+                            <div class="validation-message valid">Valid age</div>
+                            <div class="validation-message invalid">Please enter age between 18-100</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <select id="gender" class="form-control" required>
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="validation-message valid">Selected</div>
+                            <div class="validation-message invalid">Please select your gender</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="place">place (City)</label>
+                        <select id="place" class="form-control" required>
+                            <option value="">Select State</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chhattisgarh">Chhattisgarh</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Jharkhand">Jharkhand</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Mizoram">Mizoram</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Odisha">Odisha</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Uttarakhand">Uttarakhand</option>
+                            <option value="West Bengal">West Bengal</option>
+                            <option value="Delhi">Delhi</option> <!-- Technically a Union Territory but often included -->
+                        </select>
+                        <div class="validation-message valid">Valid place</div>
+                        <div class="validation-message invalid">Please enter your city</div>
+                    </div>
+
+                    <div class="form-navigation">
+                        <button type="button" class="btn btn-outline" disabled>Previous</button>
+                        <button type="button" class="btn next-step">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Basic Voice Parameters -->
+                <div class="form-step " data-step="2">
+                    <div class="parameter-group">
+                        <h4><i class="fas fa-wave-square"></i> Fundamental Frequency Parameters</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="mdvp_fo">MDVP:Fo(Hz)
+                                    <span class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">Average vocal fundamental frequency</span>
+                                    </span>
+                                </label>
+                                <input type="number" id="mdvp_fo" class="form-control" step="0.001" min="50" max="300" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="mdvp_fhi">MDVP:Fhi(Hz)
+                                    <span class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">Maximum vocal fundamental frequency</span>
+                                    </span>
+                                </label>
+                                <input type="number" id="mdvp_fhi" class="form-control" step="0.001" min="50" max="500" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="mdvp_flo">MDVP:Flo(Hz)
+                                    <span class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">Minimum vocal fundamental frequency</span>
+                                    </span>
+                                </label>
+                                <input type="number" id="mdvp_flo" class="form-control" step="0.001" min="50" max="300" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="parameter-group">
+                        <h4><i class="fas fa-chart-line"></i> Jitter Parameters</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="jitter">Jitter(%)
+                                    <span class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">Local, absolute percentage</span>
+                                    </span>
+                                </label>
+                                <input type="number" id="jitter" class="form-control" step="0.001" min="0" max="10" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="jitter_abs">Jitter(Abs)
+                                    <span class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">Absolute measure</span>
+                                    </span>
+                                </label>
+                                <input type="number" id="jitter_abs" class="form-control" step="0.000001" min="0" max="0.0001" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="jitter_rap">Jitter:RAP
+                                    <span class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">Relative amplitude perturbation</span>
+                                    </span>
+                                </label>
+                                <input type="number" id="jitter_rap" class="form-control" step="0.001" min="0" max="10" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="jitter_ppq5">Jitter:PPQ5
+                                    <span class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">Five-point period perturbation quotient</span>
+                                    </span>
+                                </label>
+                                <input type="number" id="jitter_ppq5" class="form-control" step="0.001" min="0" max="10" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="jitter_ddp">Jitter:DDP
+                                <span class="tooltip">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span class="tooltiptext">Average absolute difference of differences</span>
+                                </span>
+                            </label>
+                            <input type="number" id="jitter_ddp" class="form-control" step="0.001" min="0" max="10" required>
+                        </div>
+                    </div>
+
+                    <div class="form-navigation">
+                        <button type="button" class="btn btn-outline prev-step">Previous</button>
+                        <button type="button" class="btn next-step">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Advanced Voice Parameters -->
+                <div class="form-step" data-step="3">
+                    <div class="parameter-group">
+                        <h4><i class="fas fa-volume-up"></i> Shimmer Parameters</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="shimmer">Shimmer
+                                    <span class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">Local amplitude variation</span>
+                                    </span>
+                                </label>
+                                <input type="number" id="shimmer" class="form-control" step="0.001" min="0" max="1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="shimmer_db">Shimmer(dB)
+                                    <span class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">Local, in decibels</span>
+                                    </span>
+                                </label>
+                                <input type="number" id="shimmer_db" class="form-control" step="0.001" min="0" max="1" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="shimmer_apq3">Shimmer:APQ3
+                                    <span class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">Three-point amplitude perturbation quotient</span>
+                                    </span>
+                                </label>
+                                <input type="number" id="shimmer_apq3" class="form-control" step="0.001" min="0" max="1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="shimmer_apq5">Shimmer:APQ5
+                                    <span class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">Five-point amplitude perturbation quotient</span>
+                                    </span>
+                                </label>
+                                <input type="number" id="shimmer_apq5" class="form-control" step="0.001" min="0" max="1" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="shimmer_apq11">Shimmer:APQ11
+                                    <span class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">11-point amplitude perturbation quotient</span>
+                                    </span>
+                                </label>
+                                <input type="number" id="shimmer_apq11" class="form-control" step="0.001" min="0" max="1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="shimmer_dda">Shimmer:DDA
+                                    <span class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">Average absolute difference between consecutive differences</span>
+                                    </span>
+                                </label>
+                                <input type="number" id="shimmer_dda" class="form-control" step="0.001" min="0" max="1" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="parameter-group">
+                        <h4><i class="fas fa-chart-bar"></i> Other Voice Parameters</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nhr">NHR
+                                    <span class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">Noise-to-harmonics ratio</span>
+                                    </span>
+                                </label>
+                                <input type="number" id="nhr" class="form-control" step="0.001" min="0" max="1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="hnr">HNR
+                                    <span class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">Harmonics-to-noise ratio</span>
+                                    </span>
+                                </label>
+                                <input type="number" id="hnr" class="form-control" step="0.001" min="0" max="40" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="rpde">RPDE
+                                    <span class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">Recurrence period density entropy measure</span>
+                                    </span>
+                                </label>
+                                <input type="number" id="rpde" class="form-control" step="0.001" min="0" max="1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="dfa">DFA
+                                    <span class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">Detrended fluctuation analysis</span>
+                                    </span>
+                                </label>
+                                <input type="number" id="dfa" class="form-control" step="0.001" min="0" max="2" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="spread1">Spread1
+                                    <span class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">Nonlinear measure of fundamental frequency variation</span>
+                                    </span>
+                                </label>
+                                <input type="number" id="spread1" class="form-control" step="0.001" min="-10" max="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="spread2">Spread2
+                                    <span class="tooltip">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span class="tooltiptext">Nonlinear measure of fundamental frequency variation</span>
+                                    </span>
+                                </label>
+                                <input type="number" id="spread2" class="form-control" step="0.001" min="0" max="0.5" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="d2">D2
+                                <span class="tooltip">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span class="tooltiptext">Nonlinear dynamical complexity measure</span>
+                                </span>
+                            </label>
+                            <input type="number" id="d2" class="form-control" step="0.001" min="0" max="10" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ppe">PPE
+                                <span class="tooltip">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span class="tooltiptext">Pitch period entropy</span>
+                                </span>
+                            </label>
+                            <input type="number" id="ppe" class="form-control" step="0.001" min="0" max="1" required>
+                        </div>
+                    </div>
+
+                    <div class="form-navigation">
+                        <button type="button" class="btn btn-outline prev-step">Previous</button>
+                        <button type="button" class="btn next-step">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Review and Submit -->
+                <div class="form-step" data-step="4">
+                    <h3 style="margin-bottom: 1.5rem; text-align: center;">Review Your Information</h3>
+
+                    <div class="review-section">
+                        <h4>Personal Information</h4>
+                        <div class="review-item">
+                            <strong>Name:</strong> <span id="review-name"></span>
+                        </div>
+                        <div class="review-item">
+                            <strong>Age:</strong> <span id="review-age"></span>
+                        </div>
+                        <div class="review-item">
+                            <strong>Gender:</strong> <span id="review-gender"></span>
+                        </div>
+                        <div class="review-item">
+                            <strong>place:</strong> <span id="review-place"></span>
+                        </div>
+                    </div>
+
+                    <div class="review-section" style="margin-top: 2rem;">
+                        <h4>Voice Parameters</h4>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <strong>MDVP:Fo(Hz):</strong> <span id="review-mdvp_fo"></span>
+                            </div>
+                            <div class="form-group">
+                                <strong>MDVP:Fhi(Hz):</strong> <span id="review-mdvp_fhi"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <strong>MDVP:Flo(Hz):</strong> <span id="review-mdvp_flo"></span>
+                            </div>
+                            <div class="form-group">
+                                <strong>Jitter(%):</strong> <span id="review-jitter"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <strong>Jitter(Abs):</strong> <span id="review-jitter_abs"></span>
+                            </div>
+                            <div class="form-group">
+                                <strong>Jitter:RAP:</strong> <span id="review-jitter_rap"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <strong>Jitter:PPQ5:</strong> <span id="review-jitter_ppq5"></span>
+                            </div>
+                            <div class="form-group">
+                                <strong>Jitter:DDP:</strong> <span id="review-jitter_ddp"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <strong>Shimmer:</strong> <span id="review-shimmer"></span>
+                            </div>
+                            <div class="form-group">
+                                <strong>Shimmer(dB):</strong> <span id="review-shimmer_db"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <strong>Shimmer:APQ3:</strong> <span id="review-shimmer_apq3"></span>
+                            </div>
+                            <div class="form-group">
+                                <strong>Shimmer:APQ5:</strong> <span id="review-shimmer_apq5"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <strong>Shimmer:APQ11:</strong> <span id="review-shimmer_apq11"></span>
+                            </div>
+                            <div class="form-group">
+                                <strong>Shimmer:DDA:</strong> <span id="review-shimmer_dda"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <strong>NHR:</strong> <span id="review-nhr"></span>
+                            </div>
+                            <div class="form-group">
+                                <strong>HNR:</strong> <span id="review-hnr"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <strong>RPDE:</strong> <span id="review-rpde"></span>
+                            </div>
+                            <div class="form-group">
+                                <strong>DFA:</strong> <span id="review-dfa"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <strong>Spread1:</strong> <span id="review-spread1"></span>
+                            </div>
+                            <div class="form-group">
+                                <strong>Spread2:</strong> <span id="review-spread2"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <strong>D2:</strong> <span id="review-d2"></span>
+                            </div>
+                            <div class="form-group">
+                                <strong>PPE:</strong> <span id="review-ppe"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-navigation" style="margin-top: 2rem;">
+                        <button type="button" class="btn btn-outline prev-step">Previous</button>
+                        <button type="submit" class="btn">Submit for Analysis</button>
+                    </div>
+                </div>
+
+                <div class="loading" id="loadingIndicator">
+                    <div class="loading-content">
+                        <div class="spinner"></div>
+                        <p>Analyzing your voice parameters...</p>
+                        <div class="progress-text" id="progressText">Processing data (0%)</div>
+                    </div>
+                </div>
+            </form>
+
+            <div id="analyticsContainer" class="analytics-container">
+                <h3 class="analytics-title">Your Voice Analysis Results</h3>
+                <div class="analytics-grid">
+                    <div class="analytics-card">
+                        <div class="analytics-value" id="riskScore">0%</div>
+                        <div class="analytics-label">Risk Score</div>
+                    </div>
+                    <div class="analytics-card">
+                        <div class="analytics-value" id="jitterValue">0%</div>
+                        <div class="analytics-label">Jitter</div>
+                    </div>
+                    <div class="analytics-card">
+                        <div class="analytics-value" id="shimmerValue">0dB</div>
+                        <div class="analytics-label">Shimmer</div>
+                    </div>
+                    <div class="analytics-card">
+                        <div class="analytics-value" id="hnrValue">0</div>
+                        <div class="analytics-label">HNR</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="resultContainer" class="result-container">
+                <h2 class="result-title" id="resultTitle">Result</h2>
+
+                <div class="risk-meter">
+                    <div class="risk-level" id="riskLevel"></div>
+                    <div class="risk-marker" id="riskMarker"></div>
+                </div>
+                <div class="risk-labels">
+                    <span>Low Risk</span>
+                    <span>Medium Risk</span>
+                    <span>High Risk</span>
+                </div>
+
+                <p id="resultDescription">Description will appear here</p>
+                <div id="recommendations" style="margin-top: 1.5rem;"></div>
+            </div>
+
+            <div id="consultantOption" class="consultant-option">
+                <h3>Would you like to connect with nearby Parkinson's specialists?</h3>
+                <button id="viewDoctorsBtn" class="btn" style="margin-top: 1rem;">View Nearby Consultants</button>
+            </div>
+
+            <div id="doctorsList" class="doctors-list">
+                <h3>Parkinson's Specialists Near <span id="placeDisplay"></span></h3>
+                <div id="doctorsContainer"></div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our team for more information</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <p>+1 (800) 123-4567</p>
+                    <p>Mon-Fri: 9am-5pm EST</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <a href="mailto:neuroinde@gmail.com? Hello, Welcome NeuroInde"class="email-link">neuroinde@gmail.com</a>
+                    <p>Response within 24 hours</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Headquarter</h3>
+                    <a href="https://www.google.com/maps?q=College+More,+Kolkata+700091" target="_blank" class="map-link">
+                        <p>college More</p>
+                        <p>Sector V, Kolkata-700091</p>
+                      </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>NeuroInde</h3>
+                    <p>Advanced voice analysis for early detection of Parkinson's disease using machine learning technology.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/18oMxMV8Pk/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/NeuroInde"><svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0 512 512"><path fill="#ffffff" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a>
+                        <a href="https://www.linkedin.com/in/neuro-inde-b44309360/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/neuroinde?igsh=M212ZXc0MnJpZGw1"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Parkinson's</a></li>
+                        <li><a href="#prediction">Risk Assessment</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.parkinson.org/">Parkinson's Foundation</a></li>
+                        <li><a href="https://www.ncbi.nlm.nih.gov/books/NBK536722/">Research Papers</a></li>
+                        <li><a href="https://www.apdaparkinson.org/">Treatment Options</a></li>
+                        <li><a href="#contact">Support Groups</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 NeuroInde. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
