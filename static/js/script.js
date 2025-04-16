@@ -569,13 +569,6 @@ const doctorsDatabase = {
     "image": "https://d35oenyzp35321.cloudfront.net/DSC_09613_f0e2a36e56.jpeg"
   },
   {
-    "name": "Dr. Reena Thukral",
-    "specialty": "Stroke, Epilepsy, Headache disorders, Movement disorders, Neuromuscular diseases",
-    "hospital": "Artemis Hospital, Gurgaon",
-    "phone": "Not specified",
-    "image": "https://www.apollospectra.com/backend/web/doctor-images/1710746433Gurugram-S82_Dr.%20Reena%20Thukral.jpg"
-  },
-  {
     "name": "Dr. Mohamed Shoaib",
     "specialty": "Stroke, Epilepsy, Headache disorders, Movement disorders, Neuromuscular diseases",
     "hospital": "Fortis Memorial Research Institute, Gurgaon",
