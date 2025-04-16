@@ -1342,4 +1342,52 @@ const doctorsDatabase = {
     }, 300);
   }
   });
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menuToggle');
+    const mainMenu = document.getElementById('mainMenu');
+    
+    // Create overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'menu-overlay';
+    document.body.appendChild(overlay);
+    
+    // Toggle menu
+    menuToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        mainMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+    });
+    
+    // Close menu when clicking overlay
+    overlay.addEventListener('click', function() {
+        menuToggle.classList.remove('active');
+        mainMenu.classList.remove('active');
+        this.classList.remove('active');
+    });
+    
+    // Close menu when clicking links
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+    
+        const targetId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+    
+        if (targetSection) {
+          targetSection.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+    
+        // Close the menu after starting the scroll
+        menuToggle.classList.remove('active');
+        mainMenu.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+    
   
+});
+
+
