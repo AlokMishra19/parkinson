@@ -1089,7 +1089,7 @@ const doctorsDatabase = {
          // Create and add reload button
       const reloadButton = document.createElement("button");
       reloadButton.className = "btn btn-primary";
-      reloadButton.innerHTML = '<i class="fas fa-sync-alt"></i> Reload Page';
+      reloadButton.innerHTML = '<i class="fas fa-sync-alt"></i> New Patient';
       reloadButton.style.marginTop = "20px";
       reloadButton.addEventListener("click", function() {
         location.reload();
