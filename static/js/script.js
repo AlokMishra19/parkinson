@@ -529,28 +529,28 @@ const doctorsDatabase = {
     "specialty": "Neurological disorders",
     "hospital": "DMC Hospital, Ludhiana",
     "phone": "+91 161 230 1700",
-    "image": ""
+    "image": "https://content3.jdmagicbox.com/comp/ludhiana/64/0161p161std10464/catalogue/dr-arun-k-dhanuka-ferozepur-road-ludhiana-neurologists-icls9uwzbm.jpg"
   },
   {
     "name": "Dr. Amit Mittal",
     "specialty": "Brain and spine surgery, Neurological disorders",
     "hospital": "Neuro Life Brain & Spine Centre, Ludhiana",
     "phone": "+91 98765 43210",
-    "image": ""
+    "image": "https://neurolifebrainandspine.com/wp-content/uploads/2022/02/pic.png"
   },
   {
     "name": "Dr. Sukhdeep Singh Jhawar",
     "specialty": "Neurosurgery, Spine surgery",
     "hospital": "Deep Hospital, Ludhiana",
     "phone": "+91 98147 00000",
-    "image": ""
+    "image": "https://content.jdmagicbox.com/comp/ludhiana/d4/0161px161.x161.170520231501.r1d4/catalogue/dr-sukhdeep-singh-jhawar-brain-and-spine-surgeon-sherpur-chowk-ludhiana-neurologists-20iunvt.jpg"
   },
   {
     "name": "Dr. Karanbir Singh",
     "specialty": "Neurological disorders",
     "hospital": "Apex Hospital, Jalandhar",
     "phone": "+91 181 245 5555",
-    "image": ""
+    "image": "https://content.jdmagicbox.com/comp/jalandhar/f7/0181px181.x181.170609094159.r2f7/catalogue/dr-karanbir-singh-apex-hospital-jalandhar-city-jalandhar-neurologists-kGYhjACFQG-250.jpg"
   }
   ],
   "Haryana": [
@@ -566,28 +566,28 @@ const doctorsDatabase = {
     "specialty": "Stroke, Epilepsy, Headache disorders, Movement disorders, Neuromuscular diseases",
     "hospital": "Max Hospital, Gurgaon",
     "phone": "Not specified",
-    "image": ""
+    "image": "https://d35oenyzp35321.cloudfront.net/DSC_09613_f0e2a36e56.jpeg"
   },
   {
     "name": "Dr. Reena Thukral",
     "specialty": "Stroke, Epilepsy, Headache disorders, Movement disorders, Neuromuscular diseases",
     "hospital": "Artemis Hospital, Gurgaon",
     "phone": "Not specified",
-    "image": ""
+    "image": "https://www.apollospectra.com/backend/web/doctor-images/1710746433Gurugram-S82_Dr.%20Reena%20Thukral.jpg"
   },
   {
     "name": "Dr. Mohamed Shoaib",
     "specialty": "Stroke, Epilepsy, Headache disorders, Movement disorders, Neuromuscular diseases",
     "hospital": "Fortis Memorial Research Institute, Gurgaon",
     "phone": "Not specified",
-    "image": ""
+    "image": "https://imagesx.practo.com/providers/dr-mohamed-shoaib-neurosurgeon-delhi-658344fc-f2be-4efe-9332-d4981e92b024.jpg?i_type=t_70x70-2x-webp"
   },
   {
     "name": "Dr. Kapil Agarwal",
     "specialty": "Epilepsy, Headache, Stroke, Movement disorders, Multiple sclerosis",
     "hospital": "W Pratiksha Hospital, Gurgaon",
     "phone": "+91 98185 38242",
-    "image": ""
+    "image": "https://www.marengoasiahospitals.com/static/uploads/abe0db5a-85d1-4f48-b1f8-455858e90f9f-1683977377675.jpg"
   }
   ],
   "Uttar Pradesh": [
