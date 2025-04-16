@@ -162,7 +162,14 @@
     background-color: white;
     color: var(--primary);
   }
+
+.btn-previous{
+    background-color:#3da8d8 ;
+    border: 2px solid white;
+    margin-left: 1rem;
+  }
   
+      
   section {
     padding: 5rem 0;
   }
