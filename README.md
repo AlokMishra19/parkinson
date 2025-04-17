@@ -1,63 +1,104 @@
-Parkinson's Disease Risk Assessment Tool 📌 Overview This web application helps assess the risk of Parkinson's disease by analyzing voice parameters. It includes: ✅ Multi-step form for collecting user data and voice metrics ✅ Machine learning prediction (via Flask backend) ✅ Doctor database with neurologists across India ✅ Interactive results dashboard with risk score visualization
+# 🧠 Parkinson's Disease Risk Assessment Tool
 
-🛠 Technologies Used Frontend:
+A web application that helps assess the risk of Parkinson's disease through voice parameter analysis, offering personalized insights and professional guidance.
 
-HTML5, CSS3, JavaScript
+---
 
-Responsive design with Flexbox/Grid
+## 📌 Overview
 
-Backend:
+This tool uses clinically relevant voice metrics and a machine learning model to estimate the risk of Parkinson's Disease. It provides:
 
-Flask (Python) for prediction API
+- ✅ A **multi-step form** for collecting user and voice data
+- ✅ **Machine learning prediction** via a Flask backend
+- ✅ A **doctor locator** with neurologists across India
+- ✅ An **interactive dashboard** displaying the risk score visually
 
-Data:
+---
 
-Pre-trained ML model for Parkinson's risk assessment
+## 🛠 Technologies Used
 
-JSON-based doctor database
+### 💻 Frontend
+- HTML5, CSS3, JavaScript
+- Responsive layout using Flexbox & Grid
 
-🚀 Features User-Friendly Form
+### 🧪 Backend
+- Flask (Python) for API and prediction logic
 
-4-step process with progress tracking
+### 📊 Data & Models
+- Pre-trained machine learning model for Parkinson's risk prediction
+- Doctor database stored in JSON format
 
-Input validation & real-time feedback
+---
 
-Voice Parameter Analysis
+## 🚀 Features
 
-Accepts MDVP (Multi-Dimensional Voice Program) metrics:
+### 🧾 User-Friendly Multi-Step Form
+- 4-step process with progress tracking
+- Input validation and real-time feedback
 
-Jitter, Shimmer, HNR, RPDE, DFA, PPE, etc.
+### 🔬 Voice Parameter Analysis
+Accepts multiple MDVP (Multi-Dimensional Voice Program) metrics:
+- Jitter
+- Shimmer
+- HNR (Harmonics-to-Noise Ratio)
+- RPDE (Recurrence Period Density Entropy)
+- DFA (Detrended Fluctuation Analysis)
+- PPE (Pitch Period Entropy)
+- And more...
 
-Risk Prediction & Results
+### 📈 Risk Prediction & Results
+- Returns a percentage-based risk score
+- Visualized using an interactive **risk meter**
+- Offers recommendations and interpretation based on score
 
-Returns a percentage-based risk score
+### 🩺 Doctor Locator
+- Search for neurologists by **Indian state**
+- View doctor profiles:
+  - Name
+  - Specialty
+  - Hospital
+  - Contact information
 
-Visualized using an interactive risk meter
+---
 
-Provides actionable recommendations
+## 🔍 How It Works
 
-Doctor Locator
+### 1. User Input
+- User provides personal details: age, gender, location
+- Enters voice metrics (e.g., jitter, shimmer, etc.)
 
-Search neurologists by Indian state
+### 2. Prediction Request
+- Frontend sends the data to the Flask API (`/predict`)
+- Backend processes input using ML model and returns a risk score
 
-Displays doctor profiles (name, specialty, hospital, contact)
+### 3. Results Display
+- Shows **Low** or **High** risk indication
+- Provides doctor recommendations based on user's location
 
-🔍 How It Works User Input
+---
 
-Enters personal details (age, gender, location).
+## 📝 Notes & Future Improvements
 
-Provides voice measurement values (jitter, shimmer, etc.).
+- ✔ For accurate results, voice parameters should be collected using clinical-grade tools
+- ✔ Expand the doctor database with more cities and verified specialists
+- ✔ Add user accounts for progress tracking and historical comparisons
+- ✔ Include data export or PDF generation of results
 
-Prediction Request
+---
 
-Frontend sends data to Flask (/predict).
+## 🧪 Disclaimer
 
-Backend processes input & returns risk score.
+This tool is for **educational and informational purposes only**. It is **not a substitute for professional medical diagnosis or treatment**. Always consult a licensed medical practitioner for health concerns.
 
-Results Display
+---
 
-Low/High risk indication.
+## 📬 Contributions
 
-Doctor recommendations based on location.
+Feel free to contribute by:
+- Adding more doctors or cities to the database
+- Improving frontend UX or mobile responsiveness
+- Enhancing the ML model with more features or better accuracy
 
-📝 Notes & Improvements ✔ For better accuracy, ensure voice parameters are collected professionally. ✔ Expand doctor database with more cities/specialists. ✔ Add user accounts to track risk over time.
+---
+
+## 🧠 Made with purpose to help raise awareness and support early detection of Parkinson’s disease.
